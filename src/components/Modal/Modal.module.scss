@@ -1,0 +1,51 @@
+@import '../../styles/styles.scss';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(43, 43, 43, 0.6);
+  z-index: 1200;
+}
+
+.modal {
+  // padding-top: 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 3px 8px 14px rgba(136, 198, 253, 0.19);
+  position: relative;
+
+  @media screen and (max-width: 767.9px) {
+    display: block;
+  }
+}
+
+.button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 11px;
+  right: 11px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 300ms linear;
+
+  &:hover,
+  &:focus {
+    transform: rotate(180deg);
+  }
+}
+
+.icon {
+  color: getColor('full-blue');
+}

@@ -1,0 +1,309 @@
+@import '../../../styles/styles.scss';
+
+.div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.position {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include media-min(tablet) {
+    flex-direction: row;
+    gap: 63px;
+  }
+  @include media-min(desktop) {
+    gap: 97px;
+  }
+}
+
+.input {
+  border-radius: 40px;
+  padding-left: 16px;
+  border: 1px solid getColor(full-blue);
+  height: 40px;
+  @include media-min(tablet) {
+    width: 395px;
+  }
+}
+
+.input:focus {
+  outline: 1px solid getColor(full-blue);
+}
+
+.errorField {
+  border-radius: 40px;
+  padding-left: 16px;
+  border: 1px solid getColor(full-red);
+  height: 40px;
+
+  @include media-min(tablet) {
+    width: 395px;
+  }
+}
+
+.errorField:focus {
+  outline: 1px solid getColor(full-red);
+}
+.commentsError::placeholder,
+.comments::placeholder,
+.input::placeholder,
+.errorField::placeholder {
+  @include main-font(400, 14px, 21px);
+  color: #888888;
+  @include media-min(tablet) {
+    @include main-font(400, 16px, 24px);
+  }
+}
+
+.sex {
+  display: flex;
+  position: relative;
+  gap: 16px;
+}
+
+input[type='radio'] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include media-min(tablet) {
+    gap: 16px;
+  }
+}
+.sex label {
+  @include main-font(400, 16px, 24px);
+  display: flex;
+  width: fit-content;
+  background-color: transparent;
+  border-radius: 40px;
+  color: #888888;
+}
+
+input[type='radio']:checked + label {
+  color: getColor(full-green);
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  @include main-font(500, 14px, 19px);
+  @include media-min(tablet) {
+    gap: 8px;
+    @include main-font(500, 20px, 27px);
+  }
+}
+
+.error {
+  position: absolute;
+  color: getColor(full-red);
+  user-select: none;
+  bottom: -17px;
+  left: 0;
+  @include main-font(500, 14px, 19px);
+}
+
+.uploadlabel {
+  @include main-font(500, 14px, 19px);
+  margin-right: 27px;
+  @include media-min(tablet) {
+    @include main-font(500, 20px, 27px);
+  }
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.uploadwrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include media-min(tablet) {
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+  }
+}
+
+.upload {
+  background-color: getColor(light-blue);
+  width: 112px;
+  height: 112px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+  @include media-min(tablet) {
+    width: 182px;
+    height: 182px;
+  }
+}
+.upload:focus > .plus,
+.upload:hover > .plus {
+  scale: 1.25;
+}
+
+.comments {
+  position: relative;
+  resize: none;
+  outline: none;
+  border-radius: 20px;
+  height: 92px;
+  padding: 8px 16px;
+  border: 1px solid getColor(full-blue);
+  @include media-min(tablet) {
+    width: 395px;
+  }
+}
+
+.comments:focus {
+  outline: 2px solid getColor(full-blue);
+}
+
+.commentsError {
+  position: relative;
+  resize: none;
+  width: 100%;
+  outline: none;
+  border-radius: 20px;
+  height: 92px;
+  padding: 8px 16px;
+  border: 1px solid getColor(full-red);
+  @include media-min(tablet) {
+    width: 395px;
+  }
+}
+
+.commentsError:focus {
+  outline: 1px solid getColor(full-red);
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  @include media-min(tablet) {
+    flex-direction: row-reverse;
+    gap: 32px;
+  }
+}
+
+.next {
+  @include main-font(700, 16px, 22px);
+  color: getColor(full-white);
+  margin-left: 12px;
+  width: 248px;
+  height: 40px;
+  background-color: getColor(full-blue);
+  cursor: pointer;
+  border-radius: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  @include media-min(tablet) {
+    margin-left: 0px;
+  }
+}
+
+.loading {
+  @include main-font(700, 16px, 22px);
+  color: getColor(full-white);
+  margin-left: 12px;
+  width: 248px;
+  height: 40px;
+  background-color: getColor(full-green);
+  border-radius: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  @include media-min(tablet) {
+    margin-left: 0px;
+  }
+}
+
+.next:hover,
+.next:focus {
+  background: linear-gradient(290.46deg, #419ef1 0%, #9bd0ff 107.89%);
+}
+
+.prev {
+  @include main-font(700, 16px, 22px);
+  height: 24px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  color: getColor(full-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  fill: #fef9f9;
+  height: 24px;
+  width: 24px;
+}
+
+.arrow {
+  stroke: getColor(full-blue);
+  height: 24px;
+  width: 24px;
+}
+
+.male {
+  stroke: getColor(full-blue);
+  height: 24px;
+  width: 24px;
+  fill: none;
+}
+
+.female {
+  fill: none;
+  height: 24px;
+  width: 24px;
+  stroke: getColor(full-red);
+}
+
+.plus {
+  stroke: getColor(full-blue);
+  height: 30px;
+  width: 30px;
+  transition: 250ms;
+  @include media-min(tablet) {
+    height: 48px;
+    width: 48px;
+  }
+}

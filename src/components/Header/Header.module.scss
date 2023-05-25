@@ -1,0 +1,18 @@
+@import '../../styles/styles.scss';
+
+.header {
+  position: relative;
+  padding-top: 20px;
+  @include main-font(500, 20px, 1.2, 0.1em);
+  .headerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    @media (min-width: 1280px) {
+      justify-content: normal;
+    }
+  }
+}

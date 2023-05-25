@@ -1,0 +1,89 @@
+@import '/src/styles/styles.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  margin-right: 16px;
+  margin-bottom: 60px;
+  margin-left: 16px;
+
+  @include media-min(tablet) {
+    margin-right: 105px;
+    margin-left: 110px;
+  }
+}
+
+.title {
+  @include main-font(500, 24px, calc(33 / 24));
+  text-align: center;
+  margin-bottom: 40px;
+
+  @include media-min(tablet) {
+    @include main-font(700, 28px, calc(38 / 28));
+  }
+}
+
+.text {
+  max-width: 248px;
+  @include main-font(500, 16px, calc(22 / 16));
+  text-align: center;
+  margin-bottom: 48px;
+
+  @include media-min(tablet) {
+    max-width: 393px;
+  }
+}
+
+.modalButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include media-min(tablet) {
+    flex-direction: row;
+    gap: 17px;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 248px;
+  height: 40px;
+  outline: none;
+  border: 2px solid getColor('full-blue');
+  border-radius: 40px;
+  cursor: pointer;
+  @include main-font(700, 16px, calc(22 / 16));
+  scale: 1;
+  transition: scale 300ms easy;
+
+  &:hover,
+  :focus {
+    scale: 1.1;
+  }
+
+  @include media-min(tablet) {
+    width: 129px;
+  }
+}
+
+.btnClose {
+  color: getColor('full-blue');
+  background-color: getColor('full-white');
+}
+
+.btnYes {
+  color: getColor('full-white');
+  background-color: getColor('full-blue');
+}
+
+.icon {
+  fill: getColor('full-white');
+  width: 24px;
+  height: 24px;
+}

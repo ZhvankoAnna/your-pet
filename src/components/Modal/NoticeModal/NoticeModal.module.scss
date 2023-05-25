@@ -1,0 +1,221 @@
+@import '../../../styles/styles.scss';
+
+.wrapper {
+  @include media-max(tablet) {
+    width: 280px;
+    padding-top: 44px;
+    padding-right: 12px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+  }
+
+  @include media-min(tablet) {
+    width: 681px;
+    padding-top: 32px;
+    padding-right: 32px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+  }
+}
+
+.Notice {
+  position: relative;
+  font-family: Manrope;
+  @include media-min(tablet) {
+    display: flex;
+  }
+}
+
+.NoticePhotoWrapper {
+  position: relative;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+
+  @include media-min(tablet) {
+    width: 262px;
+    margin-left: 0;
+    margin-right: 24px;
+  }
+}
+.NoticePhoto {
+  width: 240px;
+  height: 240px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  object-fit: cover;
+
+  @include media-min(tablet) {
+    display: flex;
+    width: 262px;
+    height: 298px;
+  }
+}
+.NoticeTitle {
+  width: 200px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+
+  @include media-min(tablet) {
+    @include main-font(700, 28px, calc(38 / 28));
+    width: 315px;
+  }
+}
+
+.StickyValue {
+  min-width: 126px;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  background-color: getColor('light-blue');
+  padding: 6px 22px 6px 11px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  @include main-font(500, 14px, calc(19 / 14));
+  text-align: center;
+}
+
+.NoticeList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+
+  @include media-min(tablet) {
+    margin-bottom: 28px;
+  }
+}
+
+.NoticeList li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+  @include media-min(tablet) {
+    gap: 51px;
+  }
+
+  & h4 {
+    width: 62px;
+    @include main-font(600, 14px, calc(19 / 14));
+
+    @include media-min(tablet) {
+      width: 70px;
+      @include main-font(600, 16px, calc(22 / 16));
+    }
+  }
+
+  & p {
+    @include main-font(500, 12px, calc(16 / 12));
+
+    @include media-min(tablet) {
+      @include main-font(500, 16px, calc(22 / 16));
+    }
+  }
+
+  & a {
+    color: getColor('full-yellow');
+    text-decoration: underline;
+    @include main-font(500, 12px, calc(16 / 12));
+    transition: color 250ms ease;
+
+    @include media-min(tablet) {
+      @include main-font(500, 16px, calc(22 / 16));
+    }
+
+    &:hover {
+      color: getColor('gr-blue-start');
+    }
+  }
+}
+
+.NoticeComent {
+  width: 256px;
+  margin-bottom: 12px;
+  @include main-font(500, 14px, calc(19 / 14));
+
+  @include media-min(tablet) {
+    max-width: 618px;
+    margin-bottom: 70px;
+  }
+}
+
+.ButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 256px;
+  margin-left: auto;
+  margin-right: auto;
+  @include main-font(700, 16px, calc(22 / 16));
+
+  @include media-min(tablet) {
+    width: 100%;
+    flex-direction: row-reverse;
+    gap: 17px;
+  }
+}
+
+.button {
+  width: 256px;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid getColor('full-blue');
+  border-radius: 40px;
+  cursor: pointer;
+
+  @include media-min(tablet) {
+    width: 129px;
+  }
+}
+
+.ButtonContact {
+  color: getColor('full-blue');
+  background-color: getColor('full-white');
+  scale: 1;
+  transition: scale 250ms ease;
+  @include main-font(700, 16px, calc(22 / 16));
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.ButtonFavorite {
+  cursor: pointer;
+  color: getColor('full-white');
+  background-color: getColor('full-blue');
+  scale: 1;
+  transition: scale 250ms ease;
+  &:hover {
+    scale: 1.1;
+    &:hover .icon {
+      scale: 1.15;
+    }
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 7px;
+  stroke: getColor('full-white');
+  fill: transparent;
+  transition: scale 250ms ease;
+}
+
+.iconRemove {
+  width: 24px;
+  height: 24px;
+  margin-left: 7px;
+  stroke: getColor('full-white');
+  fill: getColor('full-white');
+  transition: scale 250ms ease;
+}

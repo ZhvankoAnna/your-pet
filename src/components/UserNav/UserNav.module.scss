@@ -1,0 +1,53 @@
+@import '../../styles/styles.scss';
+.user {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  stroke: getColor('full-yellow');
+}
+
+.userLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 767px) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-right: 38px;
+  }
+}
+
+.userName {
+  margin-right: 8px;
+
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: getColor('full-yellow');
+  transition: color 0.3s ease-in-out, scale 0.3s ease-in-out;
+
+  @media (min-width: 768px) {
+    margin-right: 0;
+  }
+}
+
+.avtarUser {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.userLink:hover .userName {
+  color: getColor('full-blue');
+  scale: 1.1;
+}
+
+.userLink:hover .avtarUser {
+  transform: rotate(360deg);
+}

@@ -1,0 +1,25 @@
+@import '../../../styles/styles.scss';
+
+.navList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-right: 28px;
+  }
+}
+
+.paw {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  fill: getColor('full-white');
+}

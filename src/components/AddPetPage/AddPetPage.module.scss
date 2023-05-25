@@ -1,0 +1,97 @@
+@import '/src/styles/styles.scss';
+
+.petSection {
+  background-image: url('../../img/mainPage/bg.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: relative;
+
+  @include media-min(tablet) {
+    background-image: url('../../img/mainPage/bgTablet.png');
+  }
+  @include media-min(desktop) {
+    background-image: url('../../img/mainPage/bgDesktop.png');
+  }
+}
+
+.form {
+  border-radius: 40px;
+  box-shadow: 3px 8px 14px rgba(136, 198, 253, 0.19);
+  padding: 20px 8px 16px 8px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  @include media-min(tablet) {
+    padding: 20px 32px 20px 32px;
+  }
+  @include media-min(desktop) {
+  }
+}
+
+.title {
+  @include main-font(500, 20px, 27px);
+  padding-left: 12px;
+  margin-bottom: 24px;
+  @include media-min(tablet) {
+    @include main-font(500, 28px, 38px);
+  }
+}
+
+.stepWrapper h3 {
+  @include main-font(500, 10px, 14px);
+  min-width: 80px;
+  position: relative;
+  @include media-min(tablet) {
+    @include main-font(500, 16px, 26px);
+  }
+}
+.stepWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  margin-bottom: 44px;
+  user-select: none;
+  @include media-min(tablet) {
+    margin-left: auto;
+    margin-right: auto;
+    gap: 16px;
+    max-width: 425px;
+  }
+}
+
+.stepCurrent {
+  color: getColor(full-blue);
+  position: relative;
+}
+
+.stepComplete {
+  color: getColor(full-green);
+  position: relative;
+}
+
+.stepDefault {
+  color: #888888;
+  position: relative;
+}
+
+.border {
+  width: 100%;
+  position: absolute;
+  height: 8px;
+  border-radius: 8px;
+  left: 0;
+  bottom: -12px;
+}
+.borderCurrent {
+  @extend .border;
+  background-color: getColor(full-blue);
+}
+.borderComplete {
+  @extend .border;
+  background-color: getColor(full-green);
+}
+.borderDefault {
+  @extend .border;
+  background-color: getColor(light-blue);
+}
